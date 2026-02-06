@@ -4,19 +4,14 @@ This project leverages historical public health data to identify patterns in dis
 
 ---
 
-## 👥 The Team
+### Team Members
 
-| Name | Role |
-| --- | --- |
-| **Ziad Hesham Mohamed** | Data Modelling (Team Leader) 
-
-| **Albaraa Ehab Elzeftawy** | Data Analyst 
-
-| **Esraa Hamada** | Viz Wizard 
-
-| **Mohamed Sherif Mohamed** | Data Curator 
-
- | --- | --- |
+| Name | Role | LinkedIn |
+|-----|-----|-----|
+| Earaa Hamada | Data Visualization Wizard | 
+| Albaraa Ehab | Data Analyst | 
+| Mohamed Shesif | Data Curator | 
+| Ziad Hesham | Data Modeling |
 
 ---
 
