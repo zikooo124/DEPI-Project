@@ -1,5 +1,4 @@
 # Disease Risk Assessment
-# Predictive Disease Risk Assessment: Healthcare Resource Utilization and Trend Forecasting
 
 This project leverages historical public health data to identify patterns in disease incidence, forecast future outbreaks, and model healthcare resource utilization. By integrating data engineering, predictive modeling, and interactive visualization, we aim to provide actionable insights for proactive public health interventions and efficient resource allocation.
 
@@ -11,13 +10,13 @@ This project leverages historical public health data to identify patterns in dis
 | --- | --- |
 | **Ziad Hesham Mohamed** | Data Modelling (Team Leader) 
 
- |
+ | --- | --- |
 | **Albaraa Ehab Elzeftawy** | Data Analyst 
 
- |
+ | --- | --- |
 | **Esraa Hamada** | Viz Wizard 
 
- |
+ | --- | --- |
 | **Mohamed Sherif Mohamed** | Data Curator 
 
  |
