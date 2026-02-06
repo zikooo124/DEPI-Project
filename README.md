@@ -16,7 +16,7 @@ This project leverages historical public health data to identify patterns in dis
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 * 
 **Trend Analysis**: Identify patterns in disease incidence and historical public health trends.
@@ -37,7 +37,7 @@ This project leverages historical public health data to identify patterns in dis
 
 ---
 
-## 📊 Dataset Overview
+## Dataset Overview
 
 The analysis utilizes a comprehensive synthetic/public dataset containing:
 
@@ -60,7 +60,7 @@ The analysis utilizes a comprehensive synthetic/public dataset containing:
 
 ---
 
-## 🛠 Methodology & Roadmap
+## Methodology & Roadmap
 
 ### Phase 1: Data Engineering (Week 1)
 
@@ -124,7 +124,7 @@ The analysis utilizes a comprehensive synthetic/public dataset containing:
 
 ---
 
-## 🚀 Expected Outcomes
+## Expected Outcomes
 
 * 
 **Proactive Response**: Facilitating faster, more targeted containment of public health outbreaks.
@@ -137,4 +137,3 @@ The analysis utilizes a comprehensive synthetic/public dataset containing:
 
 ---
 
-Would you like me to draft the **Jupyter Notebook structure** for the Week 1 cleaning and preprocessing tasks to get your repository started?
