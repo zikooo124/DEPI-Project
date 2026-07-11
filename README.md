@@ -38,13 +38,13 @@ Heart-Disease-Risk/
 │   └── F-Project.xlsx                  # Cleaned & modeled data
 │
 ├── 📁 SQL/
-│   └── analysis_queries.sql            # All PostgreSQL queries
+│   └── F-Project.sql            # All PostgreSQL queries
 │
 ├── 📁 Dashboard/
 │   └── F-Project.pbix                  # Power BI Dashboard file
 │
 └── 📁 Presentation/
-    └── Final_Project.pptx              # Final presentation
+    └── Final-Project.pptx              # Final presentation
 ```
 
 ---
