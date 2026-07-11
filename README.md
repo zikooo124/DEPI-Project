@@ -11,7 +11,7 @@ Heart disease is one of the leading causes of death worldwide. This project aims
 **Tools Used:**
 - 🔷 **Power Query (Excel)** — Data Cleaning & Modeling
 - 🐘 **PostgreSQL** — SQL Analysis
-- 📊 **Power BI** — Interactive Dashboard
+- 📊 **Power BI** — Visualization
 
 ---
 
