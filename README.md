@@ -222,16 +222,16 @@ Interactive dashboard with 3 pages:
 ## 🖼️ Screenshots
 
 ### Dashboard — Overview
-![Dashboard Overview](<img width="1280" height="719" alt="Overview" src="https://github.com/user-attachments/assets/f02dc08e-0c9e-4192-b64d-2470f1f2b86a" />)
+![Overview](https://github.com/user-attachments/assets/f02dc08e-0c9e-4192-b64d-2470f1f2b86a)
 
 ### Dashboard — Overview 2
-![Dashboard Overview](<img width="1280" height="718" alt="Overview2" src="https://github.com/user-attachments/assets/360acd44-1912-449f-9b51-f594ba195a48" />)
+![Overview2](https://github.com/user-attachments/assets/360acd44-1912-449f-9b51-f594ba195a48)
 
 ### Dashboard — Demographics
-![Dashboard Demographics](<img width="1280" height="715" alt="Demographics" src="https://github.com/user-attachments/assets/bb8b4e59-86c2-4cfc-ac9b-c05cda30cd0d" />)
+![Demographics](https://github.com/user-attachments/assets/bb8b4e59-86c2-4cfc-ac9b-c05cda30cd0d)
 
 ### Dashboard — Risk Factors
-![Dashboard Risk Factors](<img width="1280" height="718" alt="Risk Factors" src="https://github.com/user-attachments/assets/43ec9a6d-b9ff-406a-9496-5cd4a4259590" />)
+![Risk Factors](https://github.com/user-attachments/assets/43ec9a6d-b9ff-406a-9496-5cd4a4259590)
 
 ---
 
