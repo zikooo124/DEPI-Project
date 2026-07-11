@@ -1,139 +1,269 @@
-# Disease Risk Assessment
+# Heart Disease Risk Assessment
 
-This project leverages historical public health data to identify patterns in disease incidence, forecast future outbreaks, and model healthcare resource utilization. By integrating data engineering, predictive modeling, and interactive visualization, we aim to provide actionable insights for proactive public health interventions and efficient resource allocation.
-
----
-
-### Team Members
-
-| Name | Role | 
-|-----|-----|
-| Ziad Hesham | Data Modelling (Team Leader) |
-| Earaa Hamada | Data Visualization Wizard | 
-| Albaraa Ehab | Data Analyst | 
-| Mohamed Shesif | Data Curator | 
-
+> A comprehensive data analysis project to identify key risk factors for heart disease using real-world data from 297,396 patients.
 
 ---
 
-## Project Objectives
+## 📌 Project Overview
 
-* 
-**Trend Analysis**: Identify patterns in disease incidence and historical public health trends.
+Heart disease is one of the leading causes of death worldwide. This project aims to analyze patient data to identify the most significant risk factors contributing to heart disease, enabling early identification of at-risk individuals.
 
-
-* 
-**Outbreak Forecasting**: Predict future case counts and identify high-risk periods for hospital overload.
-
-
-* 
-**Resource Optimization**: Model hospital admissions, ICU bed occupancy, and vaccine inventory needs.
-
-
-* 
-**Strategic Insights**: Provide data-driven recommendations for targeted public health responses and outbreak containment.
-
-
+**Tools Used:**
+- 🔷 **Power Query (Excel)** — Data Cleaning & Modeling
+- 🐘 **PostgreSQL** — SQL Analysis
+- 📊 **Power BI** — Interactive Dashboard
 
 ---
 
-## Dataset Overview
+## 👥 Team Members
 
-The analysis utilizes a comprehensive synthetic/public dataset containing:
-
-* 
-**Time Series Data**: Weekly and monthly disease case counts by region.
-
-
-* 
-**Demographic Data**: Population statistics categorized by age group and region, alongside vaccination rates.
-
-
-* 
-**Resource Data**: Real-time metrics on hospital admissions, ICU bed occupancy, and vaccine stock.
-
-
-* 
-**Metadata**: Regional identifiers, dates, and specific disease codes.
-
-
+| Name |
+|------|
+| Albaraa Ehab Elzeftawy |
+| Esraa Hamada |
+| Mohamed Sherif Mohamed |
+| Ziad Hesham Mohamed |
 
 ---
 
-## Methodology & Roadmap
+## 📂 Project Structure
 
-### Phase 1: Data Engineering (Week 1)
-
-* 
-**Star Schema Design**: Architecting a data model focused on health events, regions, and diseases.
-
-
-* 
-**Preprocessing**: Standardizing region names, handling missing values, and calculating incidence rates per 100k population.
-
-
-* 
-**Tools**: SQL for data modeling and Python for cleaning.
-
-
-
-### Phase 2: Exploratory Analysis (Week 2)
-
-* 
-**Correlation Studies**: Analyzing the relationship between vaccination rates and subsequent case counts.
-
-
-* 
-**Demographic Impact**: Determining how population density and age groups correlate with incidence rates.
-
-
-* 
-**Resource Impact**: Evaluating fluctuations in hospital utilization during active outbreaks.
-
-
-
-### Phase 3: Predictive Modeling & Forecasting (Week 3)
-
-* 
-**Time-Series Forecasting**: Utilizing **SARIMA** or **Prophet** to predict case counts for the next 3-6 months.
-
-
-* 
-**Scenario Analysis**: Modeling the impact of a 10% increase in vaccination coverage on future caseloads.
-
-
-* 
-**Evaluation**: Measuring model performance using MAE and RMSE metrics.
-
-
-
-### Phase 4: Visualization & Delivery (Week 4)
-
-* 
-**Tableau Dashboard**: Building an interactive dashboard featuring national hotspot alerts and executive summaries.
-
-
-* 
-**Deep Dives**: Implementing filters for demographics and 6-month forecasts with confidence intervals.
-
-
-* 
-**Resource Linking**: Directly connecting case forecasts to simulated hospital resource requirements.
-
-
+```
+Heart-Disease-Risk/
+│
+├── 📁 Data/
+│   └── heart_2020_cleaned.csv          # Original dataset from Zenodo
+│
+├── 📁 Power Query/
+│   └── F-Project.xlsx                  # Cleaned & modeled data
+│
+├── 📁 SQL/
+│   └── analysis_queries.sql            # All PostgreSQL queries
+│
+├── 📁 Dashboard/
+│   └── F-Project.pbix                  # Power BI Dashboard file
+│
+└── 📁 Presentation/
+    └── Final_Project.pptx              # Final presentation
+```
 
 ---
 
-## Expected Outcomes
+## 🗂️ Dataset
 
-* 
-**Proactive Response**: Facilitating faster, more targeted containment of public health outbreaks.
+- **Source:** [Heart Disease Dataset — Zenodo](https://zenodo.org/records/15336526)
+- **Records:** 297,396 patients
+- **Features:** 18 original columns including demographic and health data
 
-
-* 
-**End-to-End Pipeline**: A fully demonstrable project showcasing skills in data engineering, predictive analytics, and data visualization.
-
-
+**Key original features:**
+| Feature | Description |
+|---------|-------------|
+| HeartDisease | Target variable (Yes/No) |
+| BMI | Body Mass Index |
+| Smoking | Smoking status |
+| AlcoholDrinking | Alcohol consumption |
+| PhysicalActivity | Physical activity status |
+| SleepTime | Average sleep hours |
+| AgeCategory | Age group |
+| Race | Race/ethnicity |
+| Sex | Gender |
+| Diabetic | Diabetes status |
+| Stroke | Stroke history |
+| GenHealth | General health self-assessment |
+| KidneyDisease | Kidney disease status |
+| SkinCancer | Skin cancer status |
 
 ---
 
+## 🧹 Data Cleaning (Power Query)
+
+All cleaning was performed using Power Query in Excel:
+
+- ✅ Removed duplicate rows
+- ✅ Removed blank rows
+- ✅ Fixed data types
+- ✅ Standardized categorical values (Yes/No)
+- ✅ Filtered unrealistic BMI values (kept 15–60)
+- ✅ Filtered unrealistic SleepTime values (kept 4–16 hours)
+- ✅ Reordered columns for clarity
+
+---
+
+## 🧠 Data Modeling (Feature Engineering)
+
+New columns created to enrich analysis:
+
+| New Column | Logic | Values |
+|-----------|-------|--------|
+| `Age_Group` | Grouped AgeCategory | 18-30 / 31-45 / 46-60 / 60+ |
+| `BMI_Category` | Based on BMI value | Underweight / Normal / Overweight / Obese |
+| `Sleep_Category` | Based on SleepTime | Short Sleep / Normal Sleep / Long Sleep |
+| `Lifestyle` | Based on Smoking + PhysicalActivity + AlcoholDrinking | Healthy / Low Risk / Moderate Risk / High Risk Lifestyle |
+| `Chronic_Count` | Count of chronic conditions (Diabetic + Asthma + KidneyDisease + SkinCancer) | 0–4 |
+| `Health_Burden` | Based on Chronic_Count | No Risk / Medium / High |
+| `Unhealthy_Days` | PhysicalHealth + MentalHealth | 0–60 |
+| `Unhealthy_Level` | Based on Unhealthy_Days | Healthy / Moderate / Unhealthy |
+| `Heart_Risk_Score` | Weighted scoring system | 0–12 |
+| `Heart_Risk` | Based on Heart_Risk_Score | Low Risk / Medium Risk / High Risk |
+
+### Heart Risk Score Formula
+
+```
+Score = 
+  BMI_Category   (Obese=2, Overweight=1)
++ Sleep_Category (abnormal=1)
++ Lifestyle      (High Risk=2, Moderate=1)
++ Age_Group      (60+=2, 46-60=1)
++ Chronic_Count  (≥2 → 2pts, =1 → 1pt)
++ Stroke         (Yes=3)
++ DiffWalking    (Yes=2)
+
+Thresholds:
+  0–2  → Low Risk
+  3–5  → Medium Risk
+  6–12 → High Risk
+```
+
+---
+
+## 🐘 SQL Analysis (PostgreSQL)
+
+All analysis was performed in PostgreSQL across 5 sections:
+
+### 1. Overview Analysis
+```sql
+SELECT HeartDisease, COUNT(*) AS total_people,
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS percentage
+FROM project.health
+GROUP BY HeartDisease;
+```
+
+### 2. Demographic Analysis
+- Heart Disease Rate by Age Group
+- Heart Disease Rate by Sex
+- Heart Disease Rate by Race
+- Multi-factor: Sex × Age Group
+
+### 3. Lifestyle & Behavioral Analysis
+- Heart Disease Rate by Lifestyle
+- Heart Disease Rate by Smoking
+- Heart Disease Rate by Physical Activity
+- Heart Disease Rate by Alcohol Drinking
+
+### 4. Health Metrics Analysis
+- Heart Disease Rate by BMI Category
+- Heart Disease Rate by Sleep Category
+- Heart Disease Rate by General Health
+- Heart Disease Rate by Unhealthy Level
+
+### 5. Chronic Conditions Analysis
+- Heart Disease Rate by Chronic Count
+- Heart Disease Rate by Health Burden
+- Heart Disease Rate by Diabetic Status
+- Heart Disease Rate by Stroke
+- Heart Disease Rate by Difficulty Walking
+
+---
+
+## 📊 Key Findings
+
+| Finding | Value |
+|---------|-------|
+| Overall Heart Disease Rate | **8.94%** |
+| Males 60+ Disease Rate | **23.3%** |
+| High Health Burden Rate | **40.3%** |
+| Stroke Patients Rate | **35.2%** |
+| Smokers vs Non-Smokers | **12.43% vs 6.41%** |
+| Poor General Health Rate | **33%** |
+| Diabetic Patients Rate | **19.8%** |
+
+---
+
+## 📈 Power BI Dashboard
+
+Interactive dashboard with 3 pages:
+
+**Page 1 — Overview**
+- KPI Cards: Total People, Heart Disease Cases, High Risk Count, Disease Rate
+- Heart Disease Distribution (Donut Chart)
+- Risk Level Distribution (Donut Chart)
+- Heart Disease Rate by General Health (Bar Chart)
+- Interactive Slicers: Sex & Age Group
+
+**Page 2 — Demographics**
+- Heart Disease Rate by Age Group
+- Heart Disease Rate by Sex
+- Heart Disease Rate by Race
+- Heart Disease Rate by Age Group & Sex (Multi-factor)
+
+**Page 3 — Risk Factors**
+- Heart Disease Rate by Lifestyle
+- Heart Disease Rate by BMI Category
+- Heart Disease Rate by Sleep Category
+- Heart Disease Rate by Smoking
+- Heart Disease Rate by Stroke
+- Heart Disease Rate by Diabetic Status
+
+> Dashboard is connected directly to PostgreSQL database.
+
+---
+
+## 💡 Recommendations
+
+1. **Target 60+ Age Group** — Routine cardiac screening should be prioritized
+2. **Stroke & Mobility Monitoring** — Close cardiac follow-up is essential
+3. **Promote Physical Activity & Healthy BMI** — Lifestyle interventions have measurable impact
+4. **Smoking Cessation Programs** — Smokers show nearly 2× the disease rate
+5. **Manage Chronic Conditions** — Integrated management reduces overall risk
+6. **Early Diabetes Intervention** — Early glucose control significantly lowers cardiac complications
+
+---
+
+## 🖼️ Screenshots
+
+### Power Query — Applied Steps
+![Power Query Steps](screenshots/power_query_steps.png)
+
+### Data Model
+![Data Model](screenshots/data_model.png)
+
+### Dashboard — Overview
+![Dashboard Overview](screenshots/dashboard_overview.png)
+
+### Dashboard — Demographics
+![Dashboard Demographics](<img width="1319" height="737" alt="image" src="https://github.com/user-attachments/assets/ecf48314-06b4-4307-ac79-ea51220f0019" />
+)
+
+### Dashboard — Risk Factors
+![Dashboard Risk Factors](screenshots/dashboard_risk_factors.png)
+
+---
+
+## 📦 How to Run
+
+1. **Clone the repo:**
+```bash
+git clone https://github.com/YOUR_USERNAME/heart-disease-risk.git
+```
+
+2. **Load data into PostgreSQL:**
+   - Create schema: run `SQL/analysis_queries.sql` (CREATE SCHEMA & TABLE section)
+   - Import `Data/heart_2020_cleaned.csv` via pgAdmin Import/Export
+
+3. **Run SQL Analysis:**
+   - Open pgAdmin
+   - Run `SQL/analysis_queries.sql`
+
+4. **Open Dashboard:**
+   - Open `Dashboard/F-Project.pbix` in Power BI Desktop
+   - Refresh data connection to your PostgreSQL instance
+
+---
+
+## 📄 License
+
+This project is for educational purposes.
+
+---
+
+*Data Analysis Project • Power Query • PostgreSQL • Power BI*
