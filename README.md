@@ -4,6 +4,12 @@
 
 ---
 
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
+
+---
+
 ## 📌 Project Overview
 
 Heart disease is one of the leading causes of death worldwide. This project aims to analyze patient data to identify the most significant risk factors contributing to heart disease, enabling early identification of at-risk individuals.
