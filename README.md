@@ -181,30 +181,40 @@ GROUP BY HeartDisease;
 
 ## 📈 Power BI Dashboard
 
-Interactive dashboard with 3 pages:
+Interactive dashboard with 4 pages connected directly to PostgreSQL database:
 
 **Page 1 — Overview**
-- KPI Cards: Total People, Heart Disease Cases, High Risk Count, Disease Rate
+- KPI Cards: Heart Disease Cases, Total People, Disease Rate, High Risk Count, Avg Sleep Hours
+- Avg BMI & Chronic Count (Gauge)
+- GenHealth Assessment (Bar Chart)
+- Physical Activity Risk (Bar Chart)
+- Lifestyle Risk (Bar Chart)
 - Heart Disease Distribution (Donut Chart)
 - Risk Level Distribution (Donut Chart)
-- Heart Disease Rate by General Health (Bar Chart)
+- Interactive Slicer: Sex
+
+**Page 2 — Overview 2**
+- SleepTime Risk (Bar Chart)
+- Risk by Race (Bar Chart)
+- KidneyDisease Risk (Donut Chart)
+- Lifestyle Risk (Bar Chart)
+- Sex and SleepTime Relation (Area Chart)
+- BMI Category Distribution
+
+**Page 3 — Demographics**
+- Heart Disease Rate by Age Group (Bar Chart)
+- Heart Disease Rate by Sex (Pie Chart)
+- Heart Disease Rate by Race (Bar Chart)
+- Heart Disease Rate by Age and Sex (Multi-factor Bar Chart)
 - Interactive Slicers: Sex & Age Group
 
-**Page 2 — Demographics**
-- Heart Disease Rate by Age Group
-- Heart Disease Rate by Sex
-- Heart Disease Rate by Race
-- Heart Disease Rate by Age Group & Sex (Multi-factor)
-
-**Page 3 — Risk Factors**
-- Heart Disease Rate by Lifestyle
-- Heart Disease Rate by BMI Category
-- Heart Disease Rate by Sleep Category
-- Heart Disease Rate by Smoking
-- Heart Disease Rate by Stroke
-- Heart Disease Rate by Diabetic Status
-
-> Dashboard is connected directly to PostgreSQL database.
+**Page 4 — Risk Factors**
+- Heart Disease Rate by Lifestyle (Bar Chart)
+- Heart Disease Rate by BMI (Bar Chart)
+- Heart Disease Rate by Sleep (Bar Chart)
+- Heart Disease Rate by Smoking (Pie Chart)
+- Heart Disease Rate by Stroke (Bar Chart)
+- Heart Disease Rate by Diabetic (Bar Chart)
 
 ---
 
