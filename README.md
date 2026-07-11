@@ -221,42 +221,17 @@ Interactive dashboard with 3 pages:
 
 ## 🖼️ Screenshots
 
-### Power Query — Applied Steps
-![Power Query Steps](screenshots/power_query_steps.png)
-
-### Data Model
-![Data Model](screenshots/data_model.png)
-
 ### Dashboard — Overview
-![Dashboard Overview](screenshots/dashboard_overview.png)
+![Dashboard Overview](<img width="1280" height="719" alt="Overview" src="https://github.com/user-attachments/assets/f02dc08e-0c9e-4192-b64d-2470f1f2b86a" />)
+
+### Dashboard — Overview 2
+![Dashboard Overview](<img width="1280" height="718" alt="Overview2" src="https://github.com/user-attachments/assets/360acd44-1912-449f-9b51-f594ba195a48" />)
 
 ### Dashboard — Demographics
-![Dashboard Demographics](<img width="1319" height="737" alt="image" src="https://github.com/user-attachments/assets/ecf48314-06b4-4307-ac79-ea51220f0019" />
-)
+![Dashboard Demographics](<img width="1280" height="715" alt="Demographics" src="https://github.com/user-attachments/assets/bb8b4e59-86c2-4cfc-ac9b-c05cda30cd0d" />)
 
 ### Dashboard — Risk Factors
-![Dashboard Risk Factors](screenshots/dashboard_risk_factors.png)
-
----
-
-## 📦 How to Run
-
-1. **Clone the repo:**
-```bash
-git clone https://github.com/YOUR_USERNAME/heart-disease-risk.git
-```
-
-2. **Load data into PostgreSQL:**
-   - Create schema: run `SQL/analysis_queries.sql` (CREATE SCHEMA & TABLE section)
-   - Import `Data/heart_2020_cleaned.csv` via pgAdmin Import/Export
-
-3. **Run SQL Analysis:**
-   - Open pgAdmin
-   - Run `SQL/analysis_queries.sql`
-
-4. **Open Dashboard:**
-   - Open `Dashboard/F-Project.pbix` in Power BI Desktop
-   - Refresh data connection to your PostgreSQL instance
+![Dashboard Risk Factors](<img width="1280" height="718" alt="Risk Factors" src="https://github.com/user-attachments/assets/43ec9a6d-b9ff-406a-9496-5cd4a4259590" />)
 
 ---
 
